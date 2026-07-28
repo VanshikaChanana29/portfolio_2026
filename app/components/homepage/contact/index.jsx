@@ -1,13 +1,13 @@
 // @flow strict
-import { personalData } from '@/utils/data/personal-data';
-import Link from 'next/link';
+import { personalData } from "@/utils/data/personal-data";
+import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
-import { FaFacebook, FaStackOverflow } from 'react-icons/fa';
+import { FaFacebook, FaStackOverflow } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
-import ContactForm from './contact-form';
+// import ContactForm from './contact-form';
 
 function ContactSection() {
   return (
@@ -18,7 +18,7 @@ function ContactSection() {
         </span>
         <span className="h-36 w-[2px] bg-[#2F2F2F]"></span>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <ContactForm />
         <div className="lg:w-3/4 ">
           <div className="flex flex-col gap-5 lg:gap-9">
@@ -56,9 +56,9 @@ function ContactSection() {
             
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
-};
+}
 
 export default ContactSection;
