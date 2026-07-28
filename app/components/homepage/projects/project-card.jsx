@@ -4,21 +4,15 @@ import * as React from 'react';
 import { FaGithub, FaExternalLinkAlt, FaCheckCircle, FaLightbulb, FaTools } from "react-icons/fa";
 import { IoMdBriefcase } from "react-icons/io";
 import { MdTimeline } from "react-icons/md";
-import Image from 'next/image';
 import { FaYoutube } from "react-icons/fa";
 
 function ProjectCard({ project }) {
   const [showFullDescription, setShowFullDescription] = React.useState(false);
 
   return (
-<div className="bg-black border border-[#2a2a2a] relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:border-violet-500/60 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]">
-
-
-      {/* Animated gradient border effect */}
-      
-      {/* Top bar with category badge */}
-<div className="flex items-center justify-between px-4 lg:px-6 py-3 bg-[#0d0d0d] border-b border-[#2a2a2a]">
-
+    <div className="bg-black border border-[#2a2a2a] relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:border-violet-500/60 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]">
+      {/* Top bar with category & architecture badge */}
+      <div className="flex flex-wrap items-center justify-between gap-2 px-4 lg:px-6 py-3 bg-[#0d0d0d] border-b border-[#2a2a2a]">
         <div className="flex items-center gap-3">
           <div className="flex gap-1.5">
             <div className="h-3 w-3 rounded-full bg-red-500"></div>
@@ -28,47 +22,53 @@ function ProjectCard({ project }) {
           <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/30">
             {project.category}
           </span>
+          {project.badge && (
+            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30">
+              {project.badge}
+            </span>
+          )}
         </div>
-        
+
         {/* Action buttons */}
         <div className="flex gap-2">
-  {project.code && (
-    <a
-      href={project.code}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300 hover:scale-110"
-      title="View Code"
-    >
-      <FaGithub className="w-4 h-4" />
-    </a>
-  )}
+          {project.code && (
+            <a
+              href={project.code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300 hover:scale-110 flex items-center gap-1 text-xs font-semibold"
+              title="View Code on GitHub"
+            >
+              <FaGithub className="w-4 h-4" />
+              <span className="hidden sm:inline">GitHub</span>
+            </a>
+          )}
 
-  {project.youtube && (
-    <a
-      href={project.youtube}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30 hover:border-red-400 transition-all duration-300 hover:scale-110"
-      title="Watch Demo Video"
-    >
-      <FaYoutube className="w-4 h-4" />
-    </a>
-  )}
+          {project.youtube && (
+            <a
+              href={project.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30 hover:border-red-400 transition-all duration-300 hover:scale-110"
+              title="Watch Demo Video"
+            >
+              <FaYoutube className="w-4 h-4" />
+            </a>
+          )}
 
-  {project.demo && (
-    <a
-      href={project.demo}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2 rounded-lg bg-violet-500/10 text-violet-400 hover:bg-violet-500/20 border border-violet-500/30 hover:border-violet-400 transition-all duration-300 hover:scale-110"
-      title="Live Demo"
-    >
-      <FaExternalLinkAlt className="w-4 h-4" />
-    </a>
-  )}
-</div>
-
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-violet-500/10 text-violet-400 hover:bg-violet-500/20 border border-violet-500/30 hover:border-violet-400 transition-all duration-300 hover:scale-110 flex items-center gap-1 text-xs font-semibold"
+              title="Live Demo"
+            >
+              <FaExternalLinkAlt className="w-4 h-4" />
+              <span className="hidden sm:inline">Live Demo</span>
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Main content */}
@@ -78,7 +78,7 @@ function ProjectCard({ project }) {
           <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
             {project.name}
           </h3>
-          
+
           <div className="flex flex-wrap gap-3 text-xs text-gray-400">
             <div className="flex items-center gap-1.5">
               <IoMdBriefcase className="text-violet-400" />
@@ -140,7 +140,7 @@ function ProjectCard({ project }) {
                 Key Highlights {showFullDescription ? '▼' : '▶'}
               </span>
             </button>
-            
+
             {showFullDescription && (
               <div className="space-y-2 pl-6 animate-fadeIn">
                 {project.highlights.map((highlight, index) => (

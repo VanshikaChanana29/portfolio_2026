@@ -1,63 +1,82 @@
 export const skillsData = [
-  // Programming Languages
-  'C',
-  'C++',
   'Python',
   'JavaScript',
   'TypeScript',
-  'PHP',
-
-  // Frontend Development
-  'HTML',
-  'CSS',
   'React',
   'Next JS',
   'Tailwind',
-
-  // Backend / Server
-  'Django',
-  'Graphql',
-
-  // Mobile Development
-  'Flutter',
-
-  // Databases
+  'HTML',
+  'CSS',
   'MongoDB',
   'PostgreSQL',
-  'MySQL',
-  'Firebase',
-
-  // Cloud & DevOps
-  'AWS',
-  'Azure',
+  'Redis',
   'Docker',
-  'Nginx',
   'Git',
-
-  // Machine Learning / Data Science
-  'Numpy',
-  'Pandas',
-  'Sklearn',
-  'Tensorflow',
-  'OpenCV',
-
-  // Tools & Others
-  'Figma',
-  'Matlab',
-  'MS Office'
+  'Linux',
+  'Figma'
 ];
 
-// Skills matched from your resume to available options:
-// ✅ Programming: C, C++, Python, Typescript, Javascript, HTML, CSS, PHP
-// ✅ Frameworks: React, Next JS, Node JS, Django, Bootstrap, Tailwind
-// ✅ Mobile: Flutter (React Native not in available list)
-// ✅ Databases: MongoDB, PostgreSQL, MySQL, Firebase, Graphql
-// ✅ Cloud & DevOps: AWS, Docker, Git
-// ✅ ML/Data Science: Numpy, Tensorflow
-// ✅ Tools: Figma, Matlab, MS Office
-
-// Note: Some skills from your resume aren't in the available list:
-// - React Native (not available - using Flutter instead)
-// - Express.js (covered under Node JS)
-// - Supabase (covered under PostgreSQL/Firebase)
-// - Redis, Pandas, Scikit-learn, SageMaker, Postman, LaTeX, Scilab (not available)
+export const categorizedSkills = [
+  {
+    category: "AI & LLM",
+    icon: "🤖",
+    description: "Generative AI, LangChain RAG & Vector Databases",
+    skills: [
+      { name: "LangChain", tag: "AI Framework" },
+      { name: "RAG Pipeline", tag: "Architecture" },
+      { name: "ChromaDB", tag: "Vector DB" },
+      { name: "Gemini API", tag: "LLM Model" },
+      { name: "Prompt Engineering", tag: "AI Tuning" }
+    ]
+  },
+  {
+    category: "Frontend",
+    icon: "💻",
+    description: "Modern web applications, state management & micro-frontends",
+    skills: [
+      { name: "React", tag: "Library" },
+      { name: "Next JS", tag: "Framework" },
+      { name: "Redux Toolkit", tag: "State Management" },
+      { name: "Tailwind", tag: "Styling" },
+      { name: "Micro-Frontend", tag: "Architecture" },
+      { name: "TypeScript", tag: "Language" },
+      { name: "JavaScript (ES6+)", tag: "Core" }
+    ]
+  },
+  {
+    category: "Backend & APIs",
+    icon: "⚙️",
+    description: "High-throughput server architectures & REST microservices",
+    skills: [
+      { name: "Node JS", tag: "Runtime" },
+      { name: "Express.js", tag: "Framework" },
+      { name: "REST APIs", tag: "Integration" },
+      { name: "Microservices", tag: "Architecture" },
+      { name: "Kafka", tag: "Event Streaming" },
+      { name: "Python", tag: "Language" }
+    ]
+  },
+  {
+    category: "Databases",
+    icon: "🗄️",
+    description: "Relational, NoSQL & in-memory caching data stores",
+    skills: [
+      { name: "MongoDB", tag: "NoSQL" },
+      { name: "PostgreSQL", tag: "Relational" },
+      { name: "Redis", tag: "In-Memory Cache" }
+    ]
+  },
+  {
+    category: "Tools & CS Concepts",
+    icon: "🛠️",
+    description: "DevOps, API testing, process standards & CS fundamentals",
+    skills: [
+      { name: "Git", tag: "Version Control" },
+      { name: "Docker", tag: "Containerization" },
+      { name: "Postman", tag: "API Testing" },
+      { name: "Linux", tag: "OS Environment" },
+      { name: "ITIL v4", tag: "Process Standard" },
+      { name: "System Design (LLD)", tag: "CS Core" }
+    ]
+  }
+];

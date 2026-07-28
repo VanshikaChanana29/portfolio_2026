@@ -80,15 +80,17 @@ function Education() {
                         </div>
 
                         {/* Image Div pushed to the extreme right */}
-                        <div className="ml-auto w-1/3 flex justify-end">
-                          <Image
-                            src={education.image} // Add an image path in your experience data
-                            alt="Experience Image"
-                            width={150}
-                            height={150}
-                            className="rounded-md object-cover"
-                          />
-                        </div>
+                        {education.image && (
+                          <div className="ml-auto w-1/3 flex justify-end">
+                            <Image
+                              src={education.image}
+                              alt="Institution Logo"
+                              width={150}
+                              height={150}
+                              className="rounded-md object-cover"
+                            />
+                          </div>
+                        )}
                       </div>
                     </div>
                   </GlowCard>

@@ -29,10 +29,10 @@ function AboutSection() {
         <div className="flex justify-center order-1 lg:order-2">
           <Image
             src={personalData.profile}
-            width={370}
-            height={300}
-            alt="Kunal Raj"
-            className="rounded-lg transition-all duration-1000 hover:scale-110 cursor-pointer"
+            width={380}
+            height={450}
+            alt="Vanshika Chanana"
+            className="rounded-2xl object-cover max-h-[450px] shadow-2xl transition-all duration-700 hover:scale-105 cursor-pointer border-2 border-violet-500/20"
           />
         </div>
       </div>

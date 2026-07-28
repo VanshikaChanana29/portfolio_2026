@@ -10,9 +10,9 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Kunal Raj - Software Developer",
+  title: "Portfolio of Vanshika Chanana - Software Developer",
   description:
-    "This is the portfolio of Kunal Raj. I am a full stack developer . I love to create beautiful and functional Mobile and web applications.",
+    "This is the portfolio of Vanshika Chanana. I am a software developer specializing in Next.js, React.js, Redux Toolkit, Node.js, Express.js, and micro-frontend architecture.",
    icons: {
     icon: "/favicon.ico"
   }

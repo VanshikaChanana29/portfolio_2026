@@ -1,123 +1,82 @@
 export const experience = [
   {
-    company: "Valise IT Groups",
-    role: "Associate Software Developer",
-    duration: "Nov 2025 – Present",
+    company: "TechBridge Consultancy Services",
+    role: "Software Developer",
+    duration: "Aug 2025 – Present",
     logo: "/logo/valise.png",
     id: 1,
     highlights: [
-      "Led 2 production projects as Project Lead, owning end-to-end delivery from architecture to deployment",
-      "Coordinated delivery of 7+ production-level projects across design, backend, frontend, and deployment teams",
-      "Architected real-time analytics dashboard achieving 50% faster task execution for HR teams",
-      "Improved delivery timelines by 25% through workflow optimization and automation"
+      "Contributed to overall platform architecture of ObservaX, a 9-tool enterprise ITSM platform aligned with ITIL v4 certified process standards",
+      "Independently owned full-stack (frontend + backend) development across 5 of 9 ObservaX tools from requirement analysis to production deployment",
+      "Architected Release Management module with multi-stage approval workflows, interactive deployment calendars, and real-time dashboards using Next.js & Redux Toolkit",
+      "Maintained & restructured legacy Remote Management System (Apache Guacamole), refactoring session-handling logic to enable zero-install browser RDP/SSH access",
+      "Implemented JWT authentication and Role-Based Access Control (RBAC) to enforce secure authorized access",
+      "Maintained enterprise Audio Voice Dialler system (Ericsson MERN stack), optimizing database queries and sustaining zero-downtime stability"
     ],
     projects: [
       {
-        name: "HR Analytics Dashboard",
-        demo: "https://dashboardanaltical.netlify.app/",
+        name: "ObservaX — Enterprise ITSM Platform",
         impact: [
-          "50% faster HR task execution",
-          "Real-time sync across teams",
-          "Role-based workflow automation"
+          "Independently built 5 out of 9 core enterprise tools",
+          "Multi-stage approval workflows & real-time release dashboards",
+          "Micro-frontend architecture for independent deployability"
         ]
       },
       {
-        name: "Enterprise Websites (Keptel & Conzura)",
-        demo: "https://kepteltech.com",
-        demo2: "https://conzuragroups.com",
+        name: "Remote Management System (Apache Guacamole)",
         impact: [
-          "9.3% CTR with avg search position 4.1",
-          "Zero-downtime production deployments",
-          "Optimized Core Web Vitals performance"
+          "Zero-install, browser-based RDP/SSH access",
+          "JWT Auth & Role-Based Access Control (RBAC)"
+        ]
+      },
+      {
+        name: "Audio Voice Dialler System (Ericsson)",
+        impact: [
+          "Sustained zero-downtime stability in production",
+          "Optimized slow database queries through indexing"
         ]
       }
     ]
   },
 
   {
-    company: "Nurdd Club Pvt Ltd",
-    role: "MERN Stack Development Intern",
-    duration: "Jul 2025 – Sep 2025",
-    logo: "/logo/Nurdd.png",
+    company: "GoKwik Solutions Pvt. Ltd.",
+    role: "Software Developer",
+    duration: "Aug 2024 – Jul 2025",
+    logo: "/logo/TradeVed.png",
     id: 2,
     highlights: [
-      "Built and shipped cross-platform mobile app with React Native (Expo Bare) published on Google Play",
-      "Delivered 4-5 end-to-end flows including authentication, onboarding, and user profiles with React Navigation",
-      "Designed 40+ modular UI components achieving ~70% component reuse across Android and iOS",
-      "Reduced UI inconsistencies across platforms through scalable component architecture"
+      "Spearheaded development of key Shopify app modules including Dashboard UI, Login Flow, Payment Integrations, and Side Cart Components",
+      "Built secure, scalable REST APIs and streamlined frontend-backend communication using React.js, Node.js, and Express.js",
+      "Debugged and shipped fixes for critical production issues — including bundle size and lazy-loading optimizations — reducing page load times"
     ],
     projects: [
       {
-        name: "Nurdd Cross-Platform Mobile App",
-        demo: "https://play.google.com/store/apps/details?id=com.nurdd.test",
+        name: "Shopify App Modules & Checkout Experience",
         impact: [
-          "1,000+ Play Store downloads",
-          "70% component reuse rate",
-          "40+ reusable UI components"
+          "Accelerated feature development using reusable component architecture",
+          "Reduced page load times via bundle size & lazy-loading optimizations"
         ]
       }
     ]
   },
 
   {
-    company: "TradeVed Pvt Ltd",
-    role: "Software Development Intern",
-    duration: "May 2025 – Jul 2025",
-    logo: "/logo/TradeVed.png",
+    company: "GDSC, CGCCOE",
+    role: "Technical Core Member (Frontend Developer)",
+    duration: "Jun 2022 – Jun 2023",
+    logo: "/logo/Nurdd.png",
     id: 3,
     highlights: [
-      "Developed real-time stock scanner integrating live NSE data feeds with WebSocket connections",
-      "Implemented sub-second data updates across 2,000+ stocks achieving 99.8% uptime",
-      "Managed complete technical documentation spanning 50+ pages for production systems",
-      "Deployed applications on Vercel with automated CI/CD pipelines achieving zero-downtime releases"
+      "Led 100+ students in hands-on frontend development workshops and collaborative projects, mentoring peers on React.js fundamentals",
+      "Organized and coordinated tech events attended by 500+ students, promoting industry best practices in web development"
     ],
     projects: [
       {
-        name: "Real-Time Stock Market Scanner",
-        demo: "https://www.tradeved.com/dashboard/trader/scanner",
+        name: "GDSC Web Development Workshops & Events",
         impact: [
-          "Sub-second updates across 2,000+ stocks",
-          "99.8% uptime in production"
-        ]
-      },
-      {
-        name: "F&O Backtesting Engine",
-        demo: "https://www.tradeved.com/dashboard/trader/backtest/fno",
-        impact: [
-          "Enabled safer strategy validation",
-          "Reduced live-trading risk exposure"
-        ]
-      }
-    ]
-  },
-
-  {
-    company: "Alsat Digitech Pvt Ltd",
-    role: "Full Stack Development Intern",
-    duration: "Nov 2024 – Jan 2025",
-    logo: "/logo/Alssat.png",
-    id: 4,
-    highlights: [
-      "Built full-stack inventory management system with React, Node.js, and MongoDB",
-      "Implemented secure API design with JWT authentication and real-time data flows",
-      "Improved inventory tracking accuracy and reduced manual overhead through automation",
-      "Strengthened production-ready workflows with asynchronous programming patterns"
-    ],
-    projects: [
-      {
-        name: "Warehouse Inventory Management System",
-        code: "https://github.com/KunalRaj9835/warehouse-app",
-        impact: [
-          "Improved inventory accuracy",
-          "Reduced manual tracking overhead"
-        ]
-      },
-      {
-        name: "Uber Clone (Learning Project)",
-        code: "https://github.com/KunalRaj9835/Uber_Clone",
-        impact: [
-          "Implemented real-time location tracking",
-          "Built end-to-end booking flow"
+          "Mentored 100+ peers on React.js & Web Development",
+          "Organized tech community events for 500+ students"
         ]
       }
     ]
