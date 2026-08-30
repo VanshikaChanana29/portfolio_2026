@@ -61,7 +61,7 @@ export default function AIAssistantWidget() {
           className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full btn-theme-accent text-white shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse-ring"
         >
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-          <span className="text-xs font-bold tracking-wide">Ask Vanshika's AI</span>
+          <span className="text-xs font-bold tracking-wide">Ask Vanshika&apos;s AI</span>
           <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-base">
             🤖
           </div>

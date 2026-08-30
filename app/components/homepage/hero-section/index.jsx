@@ -126,7 +126,7 @@ function HeroSection() {
             <button
               onClick={handleCopyCode}
               className="p-1.5 rounded-lg bg-[var(--badge-bg)] border border-[var(--badge-border)] text-[var(--text-main)] hover:scale-105 transition-all duration-200 text-xs flex items-center gap-1.5"
-              title="Copy Vanshika's Profile snippet"
+              title="Copy Vanshika&apos;s Profile snippet"
             >
               {copied ? (
                 <>
@@ -153,19 +153,19 @@ function HeroSection() {
 
             <div className="pl-6">
               <span className="text-theme-accent">name:</span>{" "}
-              <span className="text-amber-500 font-bold">'Vanshika Chanana'</span>
+              <span className="text-amber-500 font-bold">{"'Vanshika Chanana'"}</span>
               <span className="text-[var(--text-sub)]">,</span>
             </div>
 
             <div className="pl-6">
               <span className="text-theme-accent">role:</span>{" "}
-              <span className="text-emerald-500 font-bold">'Full-Stack & AI Systems Developer'</span>
+              <span className="text-emerald-500 font-bold">{"'Full-Stack & AI Systems Developer'"}</span>
               <span className="text-[var(--text-sub)]">,</span>
             </div>
 
             <div className="pl-6">
               <span className="text-theme-accent">location:</span>{" "}
-              <span className="text-cyan-400 font-bold">'Gurgaon, Haryana, India'</span>
+              <span className="text-cyan-400 font-bold">{"'Gurgaon, Haryana, India'"}</span>
               <span className="text-[var(--text-sub)]">,</span>
             </div>
 
@@ -176,19 +176,19 @@ function HeroSection() {
 
             <div className="pl-12 flex flex-wrap gap-1.5 py-1">
               <span className="px-2 py-0.5 rounded theme-badge text-xs">
-                'Next.js'
+                {"'Next.js'"}
               </span>
               <span className="px-2 py-0.5 rounded theme-badge text-xs">
-                'React.js'
+                {"'React.js'"}
               </span>
               <span className="px-2 py-0.5 rounded theme-badge text-xs">
-                'Redux Toolkit'
+                {"'Redux Toolkit'"}
               </span>
               <span className="px-2 py-0.5 rounded theme-badge text-xs">
-                'Node.js'
+                {"'Node.js'"}
               </span>
               <span className="px-2 py-0.5 rounded theme-badge text-xs">
-                'Micro-Frontends'
+                {"'Micro-Frontends'"}
               </span>
             </div>
 
@@ -204,10 +204,10 @@ function HeroSection() {
 
             <div className="pl-12 flex flex-wrap gap-1.5 py-1">
               <span className="px-2 py-0.5 rounded theme-badge text-xs text-emerald-400">
-                'Smart PDF RAG Assistant'
+                {"'Smart PDF RAG Assistant'"}
               </span>
               <span className="px-2 py-0.5 rounded theme-badge text-xs text-cyan-400">
-                'Autonomous AI Research System'
+                {"'Autonomous AI Research System'"}
               </span>
             </div>
 
@@ -218,7 +218,7 @@ function HeroSection() {
 
             <div className="pl-6">
               <span className="text-theme-accent">enterpriseImpact:</span>{" "}
-              <span className="text-amber-500 font-bold">'5+ ITSM Tools & 40% Workflow Efficiency'</span>
+              <span className="text-amber-500 font-bold">{"'5+ ITSM Tools & 40% Workflow Efficiency'"}</span>
               <span className="text-[var(--text-sub)]">,</span>
             </div>
 

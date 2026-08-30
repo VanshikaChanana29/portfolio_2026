@@ -127,7 +127,7 @@ const Projects = () => {
           ))
         ) : (
           <div className="col-span-full text-center py-16 glass-panel rounded-2xl border border-[var(--border-color)]">
-            <p className="text-[var(--text-muted)] text-base font-semibold">No matching projects found for "{searchQuery}"</p>
+            <p className="text-[var(--text-muted)] text-base font-semibold">No matching projects found for &quot;{searchQuery}&quot;</p>
             <button
               onClick={() => { setSearchQuery(''); setFilter('All'); }}
               className="mt-4 px-4 py-2 rounded-xl btn-theme-accent text-xs font-bold"
