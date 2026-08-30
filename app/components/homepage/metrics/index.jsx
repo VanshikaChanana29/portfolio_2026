@@ -49,35 +49,32 @@ const metrics = [
 function MetricsSection() {
   return (
     <div className="my-10 lg:my-16 relative z-50">
-      {/* Background Glow */}
-      <div className="w-[120px] h-[120px] bg-violet-500/10 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 filter blur-3xl opacity-50 pointer-events-none"></div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {metrics.map((metric) => {
           const IconComponent = metric.icon;
           return (
             <div
               key={metric.id}
-              className={`group relative bg-black/80 backdrop-blur-md border border-[#2a2a2a] ${metric.borderGlow} rounded-xl p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.8)]`}
+              className="glass-panel glass-panel-hover rounded-2xl p-6 transition-all duration-500 hover:-translate-y-2 group shadow-xl border border-[var(--border-color)]"
             >
               {/* Top Accent Line */}
-              <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-violet-500/40 to-transparent group-hover:via-violet-400 transition-all duration-500"></div>
+              <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-[var(--border-accent)] to-transparent opacity-50 group-hover:opacity-100 transition-all duration-500"></div>
 
               <div className="flex items-center justify-between mb-4">
-                <div className={`p-3 rounded-lg bg-[#141414] border border-[#2a2a2a] ${metric.textGlow} group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`p-3 rounded-xl bg-[var(--bg-card-hover)] border border-[var(--border-color)] ${metric.textGlow} group-hover:scale-110 transition-transform duration-300`}>
                   <IconComponent size={24} />
                 </div>
-                <HiSparkles className="text-gray-600 group-hover:text-amber-400 transition-colors duration-300" size={18} />
+                <HiSparkles className="text-[var(--text-sub)] group-hover:text-amber-400 transition-colors duration-300" size={18} />
               </div>
 
               <div>
-                <h3 className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight flex items-baseline gap-1">
+                <h3 className="text-3xl lg:text-4xl font-extrabold text-[var(--text-main)] tracking-tight flex items-baseline gap-1">
                   <span>{metric.value}</span>
                 </h3>
-                <p className="text-sm font-semibold text-gray-200 mt-1 uppercase tracking-wide">
+                <p className="text-sm font-bold text-[var(--text-main)] mt-1 uppercase tracking-wide">
                   {metric.label}
                 </p>
-                <p className="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                <p className="text-xs text-[var(--text-muted)] mt-1.5 leading-relaxed font-medium">
                   {metric.description}
                 </p>
               </div>

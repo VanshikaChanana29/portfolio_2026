@@ -1,33 +1,61 @@
 export const projectsData = [
   {
     id: 1,
-    name: 'DocuChat — AI Document Q&A Assistant',
+    name: 'Smart PDF RAG Assistant — Document Intelligence Q&A',
     category: 'AI / LLM Application',
-    badge: '🤖 RAG & LangChain AI',
+    badge: '🤖 RAG & Streamlit AI',
     timeline: '2024 - 2025',
-    company: 'Personal Project',
-    tools: ['Next.js', 'Node.js', 'LangChain', 'ChromaDB', 'Google Gemini API', 'TypeScript'],
-    role: "Full Stack Developer",
+    company: 'Personal AI Project',
+    tools: ['Python', 'Streamlit', 'LangChain', 'ChromaDB / FAISS', 'Google Gemini API', 'PyPDF2'],
+    role: "AI Engineer",
     code: 'https://github.com/VanshikaChanana29',
-    demo: '',
+    demo: 'https://pdfuploadrag-wejfgxsmsebw2svulqd2pn.streamlit.app/',
     youtube: '',
     image: '/projects/analytics.png',
     problem: 'Users needed a fast, reliable way to ask natural-language questions about dense PDF documents without hallucinations or tedious manual text searching.',
-    solution: 'Built a RAG-based chatbot using LangChain (JS SDK) and ChromaDB to answer natural-language questions from uploaded PDFs. Designed a full document ingestion pipeline covering text extraction, chunking, and embedding generation via Gemini text-embedding-004. Implemented top-k vector similarity search and Gemini 1.5 Flash for context-grounded streaming responses.',
+    solution: 'Built a RAG-based chatbot using Streamlit, LangChain, and ChromaDB/FAISS to answer natural-language questions from uploaded PDFs. Designed a full document ingestion pipeline covering text extraction, chunking, and embedding generation via Gemini text-embedding. Implemented vector similarity search and Gemini API for context-grounded responses.',
     impact: [
-      'Context-grounded, hallucination-resistant responses',
-      'Next.js frontend featuring streaming chat and inline source citations',
-      'Full document ingestion pipeline with chunking & Gemini text-embedding-004'
+      'Context-grounded, hallucination-resistant PDF query engine',
+      'Streamlit web interface with real-time file upload & indexing',
+      'Full document ingestion pipeline with semantic chunking & embeddings'
     ],
     highlights: [
-      'LangChain JS SDK & ChromaDB vector database integration',
-      'Gemini 1.5 Flash & text-embedding-004 API integration',
-      'Streaming chat UI with inline source citation'
+      'LangChain & Vector Database integration for similarity search',
+      'Google Gemini API integration for context-grounded Q&A',
+      'Live Streamlit Cloud deployment with interactive document querying'
     ]
   },
 
   {
     id: 2,
+    name: 'AI Multi-Agent Autonomous Research System',
+    category: 'AI / Autonomous Agents',
+    badge: '🧠 Multi-Agent Autonomous Pipeline',
+    timeline: '2025',
+    company: 'Personal AI Project',
+    tools: ['Python', 'Mistral AI', 'LangChain', 'Tavily Search API', 'BeautifulSoup', 'SQLite', 'Flask / HTML5'],
+    role: "AI Engineer",
+    code: 'https://github.com/VanshikaChanana29',
+    demo: 'https://ai-research-system-3tk6.onrender.com',
+    youtube: '',
+    image: '/projects/analytics.png',
+    problem: 'Conducting in-depth technical or web research manually requires querying multiple sources, scraping web pages, synthesizing findings, and verifying accuracy.',
+    solution: 'Architected a multi-agent autonomous intelligence engine powered by Mistral AI featuring a 4-stage pipeline: Search Agent (Tavily), Reader Agent (BeautifulSoup Web Scraper), Writer Chain (Synthesizer), and Critic Chain (Independent Quality Evaluator). Integrated SQLite persistence for historical research reports.',
+    impact: [
+      'Automated end-to-end deep web research with real-time status tracking',
+      'Dual report generation: full research breakdown & independent critic review',
+      'SQLite database integration for saving & replaying past research reports'
+    ],
+    highlights: [
+      '4-Stage autonomous multi-agent pipeline (Search, Read, Write, Critic)',
+      'Tavily Web Search & BeautifulSoup scraping integration',
+      'Mistral AI LLM synthesis & independent critic review chain',
+      'Render deployment with live execution pipeline progress tracker'
+    ]
+  },
+
+  {
+    id: 3,
     name: 'ObservaX — Enterprise Release Management Module',
     category: 'Enterprise ITSM Platform',
     badge: '🏢 ITIL v4 Certified ITSM',
@@ -54,7 +82,7 @@ export const projectsData = [
   },
 
   {
-    id: 3,
+    id: 4,
     name: 'Shopify App Modules & Checkout Enhancements',
     category: 'E-Commerce Platform',
     badge: '🛍️ Shopify App Architecture',

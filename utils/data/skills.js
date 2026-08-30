@@ -20,12 +20,16 @@ export const categorizedSkills = [
   {
     category: "AI & LLM",
     icon: "🤖",
-    description: "Generative AI, LangChain RAG & Vector Databases",
+    description: "Generative AI, Multi-Agent Systems, LangChain RAG & Vector DBs",
     skills: [
+      { name: "Autonomous Agents", tag: "AI Architecture" },
       { name: "LangChain", tag: "AI Framework" },
+      { name: "Streamlit", tag: "AI Web UI" },
+      { name: "Mistral AI", tag: "LLM Model" },
       { name: "RAG Pipeline", tag: "Architecture" },
-      { name: "ChromaDB", tag: "Vector DB" },
+      { name: "ChromaDB / FAISS", tag: "Vector DB" },
       { name: "Gemini API", tag: "LLM Model" },
+      { name: "Tavily Search API", tag: "Web Search Tool" },
       { name: "Prompt Engineering", tag: "AI Tuning" }
     ]
   },

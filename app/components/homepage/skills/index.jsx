@@ -17,31 +17,28 @@ function Skills() {
     : categorizedSkills.filter((c) => c.category === activeTab);
 
   return (
-    <div id="skills" className="relative z-50 my-16 lg:my-24">
-      {/* Background ambient glow */}
-      <div className="w-[120px] h-[120px] bg-violet-500/20 rounded-full absolute top-10 left-1/2 -translate-x-1/2 filter blur-3xl opacity-30 pointer-events-none"></div>
-
-      {/* Section Divider Line & Title */}
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex items-center w-full">
-          <span className="flex-1 h-[2px] bg-[#2F2F2F]"></span>
-          <span className="bg-[#2F2F2F] w-fit text-white p-2 px-5 text-xl font-bold rounded-md mx-4 uppercase tracking-wider">
-            TECHNICAL SKILLS
-          </span>
-          <span className="flex-1 h-[2px] bg-[#2F2F2F]"></span>
+    <div id="skills" className="relative z-50 my-16 lg:my-28">
+      {/* Section Title */}
+      <div className="flex flex-col items-center justify-center text-center mb-10">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full theme-badge text-xs font-mono uppercase tracking-widest mb-3">
+          <HiSparkles className="text-amber-400" />
+          <span>Technical Arsenal</span>
         </div>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--text-main)] tracking-tight">
+          Skills & <span className="text-gradient-theme">Technologies</span>
+        </h2>
       </div>
 
       {/* Category Filter Tabs */}
-      <div className="mt-8 mb-10 flex flex-wrap gap-3 justify-center px-4">
+      <div className="mt-6 mb-10 flex flex-wrap gap-2.5 justify-center px-4">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveTab(category)}
-            className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide uppercase transition-all duration-300 ${
+            className={`px-4 py-2 rounded-xl text-xs md:text-sm font-bold tracking-wide transition-all duration-300 ${
               activeTab === category
-                ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/30 scale-105"
-                : "bg-[#141414] text-gray-400 hover:bg-[#252525] hover:text-white border border-[#2a2a2a]"
+                ? "btn-theme-accent scale-105"
+                : "glass-panel text-[var(--text-muted)] hover:text-[var(--text-main)]"
             }`}
           >
             {category}
@@ -54,17 +51,17 @@ function Skills() {
         {displayedCategories.map((group, idx) => (
           <div
             key={idx}
-            className="bg-black/90 border border-[#2a2a2a] hover:border-violet-500/50 rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] flex flex-col justify-between"
+            className="glass-panel rounded-2xl p-6 transition-all duration-500 flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center justify-between mb-3 border-b border-[#2a2a2a] pb-3">
+              <div className="flex items-center justify-between mb-3 border-b border-[var(--border-color)] pb-3">
                 <div className="flex items-center gap-2.5">
                   <span className="text-2xl">{group.icon}</span>
-                  <h3 className="text-lg font-bold text-white tracking-wide">{group.category}</h3>
+                  <h3 className="text-lg font-extrabold text-[var(--text-main)] tracking-wide">{group.category}</h3>
                 </div>
-                <HiSparkles className="text-violet-400 opacity-70" size={16} />
+                <HiSparkles className="text-theme-accent opacity-70" size={16} />
               </div>
-              <p className="text-xs text-gray-400 mb-5 leading-relaxed">{group.description}</p>
+              <p className="text-xs text-[var(--text-muted)] mb-5 leading-relaxed">{group.description}</p>
 
               <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill, sIdx) => {
@@ -72,7 +69,7 @@ function Skills() {
                   return (
                     <div
                       key={sIdx}
-                      className="flex items-center gap-2 bg-[#121212] border border-[#262626] hover:border-violet-500/40 px-3 py-2 rounded-xl transition-all duration-300"
+                      className="flex items-center gap-2 bg-[var(--bg-card-hover)] border border-[var(--border-color)] px-3 py-2 rounded-xl transition-all duration-300"
                     >
                       {imgObj?.src ? (
                         <Image
@@ -83,10 +80,10 @@ function Skills() {
                           className="w-5 h-5 object-contain"
                         />
                       ) : (
-                        <div className="w-2 h-2 rounded-full bg-violet-400"></div>
+                        <div className="w-2 h-2 rounded-full bg-theme-accent"></div>
                       )}
-                      <span className="text-xs font-semibold text-gray-200">{skill.name}</span>
-                      <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-300 border border-violet-500/20">
+                      <span className="text-xs font-semibold text-[var(--text-main)]">{skill.name}</span>
+                      <span className="text-[10px] font-mono px-1.5 py-0.5 rounded theme-badge">
                         {skill.tag}
                       </span>
                     </div>
@@ -99,8 +96,8 @@ function Skills() {
       </div>
 
       {/* Animated Skill Ticker Marquee */}
-      <div className="w-full my-6 bg-[#0a0a0a] py-4 border-y border-[#2a2a2a]">
-        <p className="text-center text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4">
+      <div className="w-full my-6 py-4 glass-panel border-y border-[var(--border-color)]">
+        <p className="text-center text-xs font-mono font-semibold text-[var(--text-sub)] uppercase tracking-widest mb-4">
           Core Technical Stack & Tools Overview
         </p>
         <Marquee
@@ -114,10 +111,10 @@ function Skills() {
         >
           {skillsData.map((skill, id) => (
             <div
-              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-105 cursor-pointer"
+              className="w-36 min-w-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-xl group cursor-pointer"
               key={id}
             >
-              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#141414] group-hover:border-violet-500 transition-all duration-500">
+              <div className="w-full rounded-xl border border-[var(--border-color)] bg-[var(--bg-card-hover)] group-hover:border-[var(--border-accent)] transition-all duration-500">
                 <div className="flex flex-col items-center justify-center gap-3 p-5">
                   <div className="h-8 sm:h-9">
                     {skillsImage(skill)?.src ? (
@@ -129,12 +126,12 @@ function Skills() {
                         className="h-full w-auto rounded"
                       />
                     ) : (
-                      <div className="w-8 h-8 rounded bg-violet-500/20 flex items-center justify-center text-violet-400 text-xs font-bold">
+                      <div className="w-8 h-8 rounded theme-badge flex items-center justify-center font-bold">
                         {skill[0]}
                       </div>
                     )}
                   </div>
-                  <p className="text-white text-xs sm:text-sm font-semibold">{skill}</p>
+                  <p className="text-[var(--text-main)] text-xs sm:text-sm font-bold">{skill}</p>
                 </div>
               </div>
             </div>
