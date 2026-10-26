@@ -32,7 +32,7 @@ function HeroSection() {
           <div className="mb-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full theme-badge backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span className="text-xs font-semibold tracking-wide">
-              Available for Full-Stack & AI Roles • Gurgaon, India
+              Available for Freelance Projects & Full-Time Roles • Gurgaon, India
             </span>
             <RiSparklingFill className="text-amber-400 w-3.5 h-3.5" />
           </div>

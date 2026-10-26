@@ -1,5 +1,79 @@
 export const projectsData = [
   {
+    id: 5,
+    name: 'Taggify HRMS — HR, Attendance & Payroll System',
+    hook: 'One place for a company to run attendance, leave and payroll, instead of spreadsheets and WhatsApp messages.',
+    category: 'Business Management System',
+    badge: '✅ Live & in use',
+    timeline: 'Sep 2026 - Present',
+    company: 'Built for Taggify',
+    tools: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'Cloudflare R2', 'Render'],
+    role: "Full-Stack Developer",
+    code: '',
+    demo: 'https://dayflow-hrms-y7mc.onrender.com/admin/employees',
+    demoLabel: 'Live App (login required)',
+    youtube: '',
+    image: '',
+    problem: 'HR work was spread across spreadsheets and chat messages: who was in office, who was on leave, how much leave was left, and what each person should be paid that month. Every month-end meant manual checking and room for mistakes.',
+    solution: 'Took an open-source hackathon HRMS and turned it into the system Taggify runs its HR on. Employees punch in and out, apply for leave and see their payslips themselves; HR approves requests and runs payroll from one dashboard.',
+    features: [
+      'Office punch-in with location check, plus a Work From Home mode',
+      'Leave requests and approvals, with monthly earned leave and balances calculated automatically',
+      'Monthly payroll runs from each employee\'s CTC, with payslips employees can view themselves',
+      'Salary advances, reimbursements and office expenses tracked in one place',
+      'Employee records, documents and departments, with separate access for HR and employees',
+      'Email and in-app notifications, birthdays, and Employee of the Month certificates'
+    ],
+    impact: [
+      'HR no longer collects attendance and leave by hand at month-end',
+      'Payroll is calculated from the same records employees can see, so fewer disputes and manual errors',
+      'Employees answer their own questions (leave left, last payslip) without asking HR'
+    ],
+    highlights: [
+      'Extended an MIT-licensed hackathon project (WorkZen) into a production system: payroll runs, geofenced attendance, earned leave, advances, reimbursements',
+      'Uploaded files stored in Cloudflare R2 so they survive redeploys',
+      'Transactional email through Brevo\'s HTTP API; times shown in IST'
+    ]
+  },
+
+  {
+    id: 6,
+    name: 'Taggify Monetization OS — YouTube Revenue & Rights Management',
+    hook: 'Shows a media company exactly what each YouTube channel earned, what partners are owed, and what is still to be collected.',
+    category: 'Revenue Dashboard',
+    badge: '🚧 In active development',
+    timeline: 'Oct 2026 - Present',
+    company: 'Built for Taggify',
+    tools: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Python', 'FastAPI', 'PostgreSQL', 'YouTube API', 'Render'],
+    role: "Full-Stack Developer",
+    code: '',
+    demo: 'https://taggify-monetization.onrender.com/',
+    demoLabel: 'Live App (login required)',
+    youtube: '',
+    image: '',
+    problem: 'A company managing many YouTube channels for content owners had its money spread across monthly CMS statements, contracts and spreadsheets. Working out who earned what, which fees applied, and what was still owed took days of manual reconciliation every month.',
+    solution: 'Built an internal operating system for the founders that brings deals, channels and YouTube revenue into one dashboard. It syncs revenue from YouTube, reads the monthly CMS statements, applies the agreed fees and splits, and shows what has been received and what is still pending.',
+    features: [
+      'Daily YouTube revenue and channel performance sync, plus bulk channel import',
+      'Upload a CMS partner\'s monthly statement and get a channel-by-channel reconciliation',
+      'Deals with content owners and brand partners: contract terms, installments and revenue splits',
+      'Fee slabs and tax applied automatically before revenue is shared',
+      'Founder dashboard showing earned, received and outstanding money per company',
+      'Runs several companies from one login, each with its own separate data'
+    ],
+    impact: [
+      'Monthly revenue reconciliation done in the app instead of across spreadsheets',
+      'Founders see what each channel earned and what is still owed at a glance',
+      'Closed months are locked, and every login and change is logged, so past numbers can be trusted'
+    ],
+    highlights: [
+      'Money stored as exact decimals with currency, never floating point',
+      'Secure login: httpOnly session cookies, account lockout after failed attempts, audit log',
+      'Website and API deployed together as one Docker service on Render, with Neon Postgres and Cloudflare R2'
+    ]
+  },
+
+  {
     id: 1,
     name: 'Smart PDF RAG Assistant — Document Intelligence Q&A',
     category: 'AI / LLM Application',

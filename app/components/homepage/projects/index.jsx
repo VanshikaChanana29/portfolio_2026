@@ -37,7 +37,7 @@ const Projects = () => {
           Featured <span className="text-gradient-theme">Projects</span>
         </h2>
         <p className="text-sm text-[var(--text-muted)] max-w-xl mt-2">
-          Explore AI systems, enterprise modules, and high-scale full-stack applications with live demos.
+          Business systems, revenue dashboards, AI tools and enterprise modules I have built and shipped.
         </p>
       </div>
 

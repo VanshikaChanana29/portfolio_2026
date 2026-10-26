@@ -17,6 +17,7 @@ function Navbar() {
     { name: "Experience", id: "experience" },
     { name: "Skills", id: "skills" },
     { name: "Projects", id: "projects" },
+    { name: "Work With Me", id: "services" },
     { name: "Education", id: "education" },
     { name: "Contact", id: "contact" }
   ];
@@ -86,7 +87,7 @@ function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex items-center gap-1 bg-[var(--bg-card-hover)] p-1 rounded-xl border border-[var(--border-color)]">
+          <ul className="hidden lg:flex items-center gap-1 bg-[var(--bg-card-hover)] p-1 rounded-xl border border-[var(--border-color)]">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -123,7 +124,7 @@ function Navbar() {
             {/* Mobile Hamburger Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-xl glass-panel text-[var(--text-main)] hover:scale-105 transition-all"
+              className="lg:hidden p-2 rounded-xl glass-panel text-[var(--text-main)] hover:scale-105 transition-all"
               title="Toggle Mobile Menu"
             >
               {mobileMenuOpen ? <HiX className="w-5 h-5 text-theme-accent" /> : <HiMenuAlt3 className="w-5 h-5 text-theme-accent" />}
@@ -133,7 +134,7 @@ function Navbar() {
 
         {/* Mobile Slide-down Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-3 pt-3 border-t border-[var(--border-color)] animate-fadeIn">
+          <div className="lg:hidden mt-3 pt-3 border-t border-[var(--border-color)] animate-fadeIn">
             <div className="grid grid-cols-2 gap-2 p-1">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;

@@ -67,7 +67,7 @@ function ProjectCard({ project }) {
               title="Live Demo"
             >
               <FaExternalLinkAlt className="w-3.5 h-3.5" />
-              <span>Live App</span>
+              <span>{project.demoLabel || "Live App"}</span>
             </a>
           )}
         </div>
@@ -80,6 +80,12 @@ function ProjectCard({ project }) {
           <h3 className="text-xl lg:text-2xl font-extrabold text-[var(--text-main)] mb-2.5 group-hover:text-theme-accent transition-colors">
             {project.name}
           </h3>
+
+          {project.hook && (
+            <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2.5">
+              {project.hook}
+            </p>
+          )}
 
           <div className="flex flex-wrap gap-4 text-xs text-[var(--text-sub)] font-mono">
             <div className="flex items-center gap-1.5">
@@ -113,7 +119,7 @@ function ProjectCard({ project }) {
                 : "text-[var(--text-muted)] hover:text-[var(--text-main)]"
             }`}
           >
-            Impact Metrics
+            Impact
           </button>
         </div>
 
@@ -139,6 +145,23 @@ function ProjectCard({ project }) {
                 {project.solution}
               </p>
             </div>
+
+            {project.features && (
+              <div>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <FaCheckCircle className="text-emerald-400 flex-shrink-0" />
+                  <h4 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wide">Key Features</h4>
+                </div>
+                <div className="space-y-1.5 pl-6">
+                  {project.features.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></div>
+                      <span className="text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -147,7 +170,7 @@ function ProjectCard({ project }) {
           <div className="space-y-3 animate-fadeIn">
             <div className="flex items-center gap-2 mb-2">
               <FaCheckCircle className="text-emerald-400 flex-shrink-0" />
-              <h4 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wide">Verified Impact</h4>
+              <h4 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wide">Business Impact</h4>
             </div>
             <div className="grid grid-cols-1 gap-2.5 pl-6">
               {project.impact.map((item, index) => (

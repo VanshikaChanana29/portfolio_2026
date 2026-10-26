@@ -40,7 +40,7 @@ function ContactSection() {
           Let&apos;s Connect & <span className="text-gradient-theme">Build Together</span>
         </h2>
         <p className="text-sm text-[var(--text-muted)] max-w-xl mt-2">
-          Open to full-stack engineering roles, multi-agent AI consultations, and technical collaborations.
+          Open to freelance projects for clients worldwide, full-stack engineering roles, and AI consultations.
         </p>
       </div>
 
