@@ -1,30 +1,25 @@
 import Hero from "@/components/sections/hero";
 import Trust from "@/components/sections/trust";
-import Services from "@/components/sections/services";
-import CaseStudies from "@/components/sections/case-studies";
-import { Process, WhyMe } from "@/components/sections/why-process";
-import TechStack from "@/components/sections/tech-stack";
-import { Pricing, Testimonials } from "@/components/sections/pricing";
-import { About, Faq } from "@/components/sections/about-faq";
-import Contact from "@/components/sections/contact";
-import Experience from "@/components/sections/experience";
+import Problems from "@/components/sections/problems";
+import { ServicesPreview } from "@/components/sections/services";
+import FeaturedWork from "@/components/sections/featured-work";
+import { Process } from "@/components/sections/why-process";
+import { Testimonials } from "@/components/sections/pricing";
+import { Faq } from "@/components/sections/about-faq";
+import Cta from "@/components/sections/cta";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Trust />
-      <Services />
-      <CaseStudies />
-      <WhyMe />
+      <Problems />
+      <ServicesPreview />
+      <FeaturedWork />
       <Process />
-      <TechStack />
-      <Pricing />
       <Testimonials />
-      <About />
-      <Experience />
       <Faq />
-      <Contact />
+      <Cta />
     </>
   );
 }

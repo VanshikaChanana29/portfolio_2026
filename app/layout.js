@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Chatbot from "@/components/chatbot";
 import AnalyticsEvents from "@/components/analytics";
-import { analytics, links, person, seo, services } from "@/content/site-data";
+import { analytics, brand, links, person, seo, services } from "@/content/site-data";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
 
@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: person.name,
+    siteName: brand.name,
     title: seo.title,
     description: seo.description,
     locale: "en_US",

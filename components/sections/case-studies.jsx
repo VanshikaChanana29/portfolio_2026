@@ -14,26 +14,18 @@ const filters = [
 export default function CaseStudies() {
   const [active, setActive] = useState("all");
 
-  // "See examples" links in the Services section pre-select a filter.
+  // "See examples" links on the Services page arrive as /work/?service=<id>.
   useEffect(() => {
-    const onClick = (e) => {
-      const el = e.target.closest?.("[data-service-link]");
-      if (el) setActive(el.dataset.serviceLink);
-    };
-    document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
+    const service = new URLSearchParams(window.location.search).get("service");
+    if (filters.some((f) => f.id === service)) setActive(service);
   }, []);
 
   const visible = caseStudies.filter((c) => active === "all" || c.services.includes(active));
 
   return (
-    <section id="work" aria-labelledby="work-title" className="section border-t border-line bg-surface">
+    <section id="work" aria-label="Case studies" className="section !pt-10">
       <div className="container">
-        <p className="eyebrow">Case studies</p>
-        <h2 id="work-title" className="h2">Real products, real results</h2>
-        <p className="lead">Each one started with a business problem. Here's what I built and what changed.</p>
-
-        <div role="group" aria-label="Filter case studies by service" className="mt-8 flex flex-wrap gap-2">
+        <div role="group" aria-label="Filter case studies by service" className="flex flex-wrap gap-2">
           {filters.map((f) => (
             <button
               key={f.id}
@@ -66,7 +58,7 @@ export default function CaseStudies() {
 function CaseStudy({ c }) {
 
   return (
-    <article id={c.slug} aria-labelledby={`${c.slug}-title`} className="scroll-mt-24 rounded-2xl border border-line bg-bg p-6 sm:p-8">
+    <article id={c.slug} aria-labelledby={`${c.slug}-title`} className="scroll-mt-24 rounded-2xl border border-line bg-surface p-6 sm:p-8">
       <div className="flex flex-wrap items-center gap-2">
         <span className="chip">{c.type}</span>
         <span className="chip !border-transparent !bg-accent-soft !text-accent">

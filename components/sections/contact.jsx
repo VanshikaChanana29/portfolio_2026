@@ -20,7 +20,7 @@ export default function Contact() {
       <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2 id="contact-title" className="h2">Tell me what you want to build</h2>
+          <h1 id="contact-title" className="mt-2 text-4xl font-bold leading-[1.1] sm:text-5xl">Tell me what you want to build</h1>
           <p className="lead">
             Email, call or WhatsApp me with what you have in mind. I'll reply within one working day with questions, a rough plan, or a time to talk.
           </p>

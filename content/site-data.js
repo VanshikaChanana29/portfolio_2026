@@ -28,6 +28,13 @@ export const person = {
   siteUrl: "https://vanshikachanana.netlify.app",
 };
 
+// Business name shown in the navbar, footer and page titles. Swap once the brand name is final.
+export const brand = {
+  name: person.name,
+  initials: "VC",
+  tagline: "Custom business software, dashboards and AI tools for growing companies.",
+};
+
 export const links = {
   linkedin: "https://www.linkedin.com/in/vanshikachanana",
   github: "https://github.com/VanshikaChanana29",
@@ -56,11 +63,37 @@ export const analytics = {
 // Hero
 // ---------------------------------------------------------------------------
 export const hero = {
-  headline: "I build custom business software, dashboards and AI tools for growing companies.",
+  headline: "Turn spreadsheets and manual work into software that runs your business.",
   subheadline:
-    "From idea to live product. I design, build and deploy the whole thing, and keep you updated every week.",
+    "I build custom business tools, dashboards and AI chatbots that take repetitive work off your team. From idea to live product, with an update every week.",
   points: ["Live products used every day", "Clear weekly updates", "You own the code"],
 };
+
+// ---------------------------------------------------------------------------
+// Problems the homepage opens with. Each one maps to work in the case studies or services.
+// ---------------------------------------------------------------------------
+export const problems = [
+  {
+    title: "Spreadsheets doing a system's job",
+    text: "Key numbers live in files that get copied, edited and checked by hand, and one wrong cell changes everything.",
+    fix: "One system with roles, locked records and a full change log",
+  },
+  {
+    title: "Month-end that means chasing people",
+    text: "Attendance, payroll or revenue only add up after days of follow-ups and manual checks.",
+    fix: "Automated reconciliation and reports your team can trust",
+  },
+  {
+    title: "Tools that don't talk to each other",
+    text: "Your data sits in different apps, so someone has to copy it across before anyone can see the full picture.",
+    fix: "A dashboard fed directly by the tools you already use",
+  },
+  {
+    title: "The same questions, answered again and again",
+    text: "Your team keeps stopping work to answer things that are already written down somewhere.",
+    fix: "An AI chatbot that answers from your own documents",
+  },
+];
 
 // ---------------------------------------------------------------------------
 // Numbers. Only real, client-relevant facts.
@@ -141,7 +174,6 @@ export const services = [
       "Ongoing support on a monthly retainer",
     ],
     timeline: "", // [ADD]
-    examples: "#experience", // examples live in the Experience section (e.g. the 3 s → 200 ms fix)
   },
   {
     id: "redesign",
@@ -606,7 +638,7 @@ export const seo = {
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-export const bookingHref = links.booking || "#contact";
+export const bookingHref = links.booking || "/contact/";
 export const availabilityText = availability.open
   ? `Available for new projects${availability.from ? ` from ${availability.from}` : ""}`
   : "Fully booked. Join the waitlist";

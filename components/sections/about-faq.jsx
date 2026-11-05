@@ -16,7 +16,7 @@ export function About() {
         />
         <div>
           <p className="eyebrow">About</p>
-          <h2 id="about-title" className="h2">{about.headline}</h2>
+          <h1 id="about-title" className="mt-2 text-4xl font-bold leading-[1.1] sm:text-5xl">{about.headline}</h1>
           <div className="mt-5 max-w-prose space-y-4 text-lg text-muted">
             {about.paragraphs.map((p) => (
               <p key={p}>{p}</p>
@@ -37,8 +37,8 @@ export function About() {
             </ul>
           </div>
 
-          <a href="#experience" className="btn-secondary mt-8">
-            See full experience
+          <a href="/work/" className="btn-secondary mt-8">
+            See my work
           </a>
         </div>
       </div>

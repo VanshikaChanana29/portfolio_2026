@@ -29,7 +29,7 @@ export default function Hero() {
             Book a free 15-min call
             <HiArrowRight aria-hidden="true" />
           </a>
-          <a href="#work" className="btn-secondary !px-6 !py-3 text-base" data-track="see_work">
+          <a href="/work/" className="btn-secondary !px-6 !py-3 text-base" data-track="see_work">
             See my work
           </a>
         </div>
@@ -49,7 +49,7 @@ export default function Hero() {
         <ul className="mt-4 divide-y divide-line">
           {shipped.map((c) => (
             <li key={c.slug} className="py-4 first:pt-0 last:pb-0">
-              <a href={`#${c.slug}`} className="group block">
+              <a href={`/work/#${c.slug}`} className="group block">
                 <span className="flex items-center justify-between gap-3">
                   <span className="font-semibold text-ink group-hover:text-accent">{c.title}</span>
                   <span className="shrink-0 rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent">{c.status}</span>

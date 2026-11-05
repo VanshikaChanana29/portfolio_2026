@@ -43,7 +43,7 @@ export function Pricing() {
                     <span className="font-semibold text-ink">Quote after a free call</span>
                   )}
                 </p>
-                <a href="#contact" className="btn-primary mt-4" data-track="pricing_cta" data-track-label={e.id}>
+                <a href="/contact/" className="btn-primary mt-4" data-track="pricing_cta" data-track-label={e.id}>
                   {e.cta}
                 </a>
               </li>

@@ -39,7 +39,7 @@ const intents = [
         "There are three ways to work together:\n\n" +
         engagements.map((e) => `• ${e.title}: ${e.price ? `from ${e.price} ${e.unit}` : "quote after a free call"}. ${e.best}`).join("\n") +
         "\n\nYou always get a written quote before any work starts.",
-      links: [{ label: "See pricing", href: "#pricing" }, bookLink],
+      links: [{ label: "See pricing", href: "/services/#pricing" }, bookLink],
     }),
   },
   {
@@ -50,7 +50,7 @@ const intents = [
     keys: ["service", "offer", "build", "help", "do you do", "what can"],
     answer: () => ({
       text: "Vanshika can help with:\n\n" + services.map((s) => `• ${s.title}: ${s.summary}`).join("\n"),
-      links: [{ label: "See services", href: "#services" }],
+      links: [{ label: "See services", href: "/services/" }],
     }),
   },
   {
@@ -74,7 +74,7 @@ const intents = [
       const items = caseStudies.filter((c) => c.services.includes("dashboards"));
       return {
         text: "Examples of dashboards and internal tools Vanshika built:\n\n" + items.map((c) => `• ${c.title}: ${c.results[0]}`).join("\n"),
-        links: items.map((c) => ({ label: c.title, href: `#${c.slug}` })),
+        links: items.map((c) => ({ label: c.title, href: `/work/#${c.slug}` })),
       };
     },
   },
@@ -82,7 +82,7 @@ const intents = [
     keys: ["project", "work", "portfolio", "case", "example", "client", "built"],
     answer: () => ({
       text: "Selected work:\n\n" + caseStudies.map((c) => `• ${c.title} (${c.status})`).join("\n"),
-      links: [{ label: "See case studies", href: "#work" }],
+      links: [{ label: "See case studies", href: "/work/" }],
     }),
   },
   {
@@ -91,7 +91,7 @@ const intents = [
   },
   {
     keys: ["process", "how do you work", "steps", "workflow", "update"],
-    answer: () => ({ text: processSteps.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`).join("\n"), links: [{ label: "See process", href: "#process" }] }),
+    answer: () => ({ text: processSteps.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`).join("\n"), links: [{ label: "See process", href: "/#process" }] }),
   },
   {
     keys: ["redesign", "maintenance", "maintain", "existing website", "existing site", "old website", "revamp", "update my site"],
@@ -222,7 +222,7 @@ export default function Chatbot() {
                   {m.links?.length > 0 && (
                     <span className="mt-2 flex flex-wrap gap-2">
                       {m.links.map((l) => {
-                        const internal = l.href.startsWith("#");
+                        const internal = l.href.startsWith("/") && !l.href.endsWith(".pdf");
                         return (
                           <a
                             key={l.href + l.label}

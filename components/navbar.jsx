@@ -1,22 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 import ThemeToggle from "./theme-toggle";
-import { bookingHref, links, person } from "@/content/site-data";
+import { bookingHref, brand, links } from "@/content/site-data";
 
 const nav = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/services/" },
+  { label: "Work", href: "/work/" },
+  { label: "Pricing", href: "/services/#pricing" },
+  { label: "About", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isCurrent = (href) => pathname.replace(/[/]$/, "") === href.replace(/[/]$/, "");
 
   useEffect(() => {
     if (!open) return;
@@ -30,17 +32,17 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/70 bg-bg/85 backdrop-blur supports-[backdrop-filter]:bg-bg/70">
       <nav aria-label="Main" className="container flex h-16 items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-2.5 font-semibold text-ink">
+        <Link href="/" className="flex items-center gap-2.5 font-semibold text-ink">
           <span aria-hidden="true" className="grid h-8 w-8 place-items-center rounded-lg bg-accent-solid text-sm font-bold text-white">
-            VC
+            {brand.initials}
           </span>
-          <span className="sr-only sm:not-sr-only">{person.name}</span>
-        </a>
+          <span className="sr-only sm:not-sr-only">{brand.name}</span>
+        </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {nav.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="rounded-lg px-3 py-2 text-sm font-medium text-muted hover:text-ink">
+              <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined} className={`rounded-lg px-3 py-2 text-sm font-medium hover:text-ink ${isCurrent(item.href) ? "text-ink" : "text-muted"}`}>
                 {item.label}
               </a>
             </li>
@@ -49,9 +51,6 @@ export default function Navbar() {
 
         <div className="flex items-center gap-1.5">
           <ThemeToggle />
-          <a href={person.resume} target="_blank" rel="noopener" className="btn-ghost hidden sm:inline-flex" data-track="resume_download">
-            Resume
-          </a>
           <a
             href={bookingHref}
             {...(external ? { target: "_blank", rel: "noopener" } : {})}
@@ -84,10 +83,7 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="mt-2 grid grid-cols-2 gap-2">
-              <a href={person.resume} target="_blank" rel="noopener" className="btn-secondary" data-track="resume_download">
-                Resume
-              </a>
+            <li className="mt-2 grid">
               <a
                 href={bookingHref}
                 {...(external ? { target: "_blank", rel: "noopener" } : {})}
