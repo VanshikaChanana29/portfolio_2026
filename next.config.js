@@ -1,29 +1,11 @@
-const path = require('path')
- 
+/** @type {import('next').NextConfig} */
 module.exports = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+  // Fully static site: fastest to load.
+  output: "export",
+  trailingSlash: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'media.dev.to',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'media2.dev.to',
-        pathname: '**',
-      },
-    ],
+    // Static export can't optimise images on request, so images are
+    // pre-compressed to WebP by `npm run images` instead.
+    unoptimized: true,
   },
-}
+};

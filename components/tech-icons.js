@@ -1,0 +1,40 @@
+import {
+  SiCloudflare,
+  SiDocker,
+  SiFastapi,
+  SiGithubactions,
+  SiGooglegemini,
+  SiLangchain,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiRedis,
+  SiTypescript,
+  SiAmazonwebservices,
+} from "react-icons/si";
+import { HiCircleStack, HiDocumentMagnifyingGlass, HiQueueList } from "react-icons/hi2";
+
+// Keys used by `stack` in content/site-data.js
+export const techIcons = {
+  react: SiReact,
+  next: SiNextdotjs,
+  ts: SiTypescript,
+  node: SiNodedotjs,
+  python: SiPython,
+  fastapi: SiFastapi,
+  queue: HiQueueList,
+  langchain: SiLangchain,
+  rag: HiDocumentMagnifyingGlass,
+  vector: HiCircleStack,
+  gemini: SiGooglegemini,
+  postgres: SiPostgresql,
+  mongo: SiMongodb,
+  redis: SiRedis,
+  docker: SiDocker,
+  aws: SiAmazonwebservices,
+  cloudflare: SiCloudflare,
+  gha: SiGithubactions,
+};

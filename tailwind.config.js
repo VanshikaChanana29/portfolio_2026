@@ -1,35 +1,32 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "1rem",
-          sm: "2rem",
-          lg: "3rem",
-          xl: "4rem",
-          "2xl": "4rem",
-          "3xl": "5rem",
-        },
-      },
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`;
 
-      extend: {
-        screens: {
-          "4k": "1980px",
-        },
+module.exports = {
+  content: ["./app/**/*.{js,jsx}", "./components/**/*.{js,jsx}", "./content/**/*.js"],
+  theme: {
+    container: {
+      center: true,
+      padding: { DEFAULT: "1.25rem", sm: "2rem", lg: "2.5rem" },
+      screens: { "2xl": "1200px" },
+    },
+    extend: {
+      colors: {
+        bg: token("bg"),
+        surface: token("surface"),
+        "surface-2": token("surface-2"),
+        line: token("line"),
+        ink: token("ink"),
+        muted: token("muted"),
+        accent: token("accent"),
+        "accent-solid": token("accent-solid"),
+        "accent-soft": token("accent-soft"),
+        success: token("success"),
       },
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+      },
+      maxWidth: { prose: "65ch" },
     },
   },
   plugins: [],
-}
+};

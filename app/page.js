@@ -1,27 +1,30 @@
-import AboutSection from "./components/homepage/about";
-import ContactSection from "./components/homepage/contact";
-import Education from "./components/homepage/education";
-import Experience from "./components/homepage/experience";
-import HeroSection from "./components/homepage/hero-section";
-import HeroTicker from "./components/homepage/hero-ticker";
-import MetricsSection from "./components/homepage/metrics";
-import Projects from "./components/homepage/projects";
-import Services from "./components/homepage/services";
-import Skills from "./components/homepage/skills";
+import Hero from "@/components/sections/hero";
+import Trust from "@/components/sections/trust";
+import Services from "@/components/sections/services";
+import CaseStudies from "@/components/sections/case-studies";
+import { Process, WhyMe } from "@/components/sections/why-process";
+import TechStack from "@/components/sections/tech-stack";
+import { Pricing, Testimonials } from "@/components/sections/pricing";
+import { About, Faq } from "@/components/sections/about-faq";
+import Contact from "@/components/sections/contact";
+import Experience from "@/components/sections/experience";
 
 export default function Home() {
   return (
-    <div suppressHydrationWarning >
-      <HeroSection />
-      <HeroTicker />
-      <MetricsSection />
-      <AboutSection />
-      <Experience />
-      <Skills />
-      <Projects />
+    <>
+      <Hero />
+      <Trust />
       <Services />
-      <Education />
-      <ContactSection />
-    </div>
-  )
-};
+      <CaseStudies />
+      <WhyMe />
+      <Process />
+      <TechStack />
+      <Pricing />
+      <Testimonials />
+      <About />
+      <Experience />
+      <Faq />
+      <Contact />
+    </>
+  );
+}
